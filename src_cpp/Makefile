@@ -71,10 +71,14 @@ BINARY:=imb
 endif
 
 ifeq ($(origin CC),default)
-CC=mpiicc
+# SSY modified 2020/11/17
+#CC=mpiicc
+CC=mpicc
 endif
 ifeq ($(origin CXX),default)
-CXX=mpiicpc
+# SSY modified 2020/11/17
+#CXX=mpiicpc
+CXX=mpicxx
 endif
 override CPPFLAGS += -I.
 override CFLAGS += -O0 -Wall -Wno-long-long

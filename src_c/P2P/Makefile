@@ -54,7 +54,9 @@ override CFLAGS += -O3 -Wall -Wextra -pedantic -Wno-long-long
 override LDFLAGS += -lm
 
 ifeq ($(origin CC),default)
-CC=mpiicc
+# SSY change 2020/11/17
+#CC=mpiicc
+CC=mpicc
 endif
 
 all: $(BINARY)
